@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 
 @RestController
-@RequestMapping("/api/status")
+@RequestMapping("/status")
 public class StatusController {
 
     @Value("${spring.application.name}")
