@@ -1,4 +1,4 @@
-package com.arivoli.product;
+package com.arivoli.pms;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
