@@ -1,7 +1,8 @@
 package com.arivoli.pms.controller;
 
-import com.arivoli.pms.model.StatusResponse;
+import com.arivoli.pms.response.StatusResponse;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,11 +17,13 @@ public class StatusController {
     private String applicationName;
 
     @GetMapping()
-    public StatusResponse checkStatus() {
-        return new StatusResponse(
+    public ResponseEntity<StatusResponse> checkStatus() {
+        StatusResponse statusResponse = new StatusResponse(
                 applicationName,
                 "UP",
                 LocalDateTime.now()
         );
+
+        return ResponseEntity.ok(statusResponse);
     }
 }
