@@ -1,6 +1,8 @@
 package com.arivoli.pms.controller;
 
 import com.arivoli.pms.dto.Product;
+import com.arivoli.pms.entity.ProductEntity;
+import com.arivoli.pms.service.ProductService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -10,86 +12,74 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/products")
 public class ProductController {
 
-    private static Long currentProductId = 0L;
-    private final List<Product> products = new ArrayList<>();
+    private final ProductService productService;
 
-    @GetMapping()
-    public ResponseEntity<Page<Product>> getAll() {
-        Pageable pageable = PageRequest.of(1, 10);
-        Page<Product> page = new PageImpl<>(products, pageable, products.size());
-
-        return ResponseEntity.ok(page);
+    public ProductController(ProductService productService) {
+        this.productService = productService;
     }
 
-    @PostMapping()
-    public ResponseEntity<Product> create(@RequestBody Product product) {
-        product.setId(++currentProductId);
-        LocalDateTime dateTime = LocalDateTime.now();
-        product.setCreatedAt(dateTime);
-        product.setUpdatedAt(dateTime);
-        products.add(product);
+    /**
+     * Create Product
+     * POST /api/pms/products
+     */
+    @PostMapping
+    public ResponseEntity<ProductEntity> create(
+            @RequestBody ProductEntity product) {
 
-        return new ResponseEntity<>(product, HttpStatus.CREATED);
+        ProductEntity createdProduct = productService.create(product);
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdProduct);
     }
 
+    /**
+     * Get Product by ID
+     * GET /api/pms/products/{id}
+     */
     @GetMapping("/{id}")
-    public ResponseEntity<Product> getById(@PathVariable Long id) {
+    public ResponseEntity<ProductEntity> getById(
+            @PathVariable Long id) {
 
-        Product product = getProduct(id);
-
-        if (product == null) {
-            throw new EntityNotFoundException("The product not found: " + id);
-        }
-
-        return ResponseEntity.ok(product);
+        return ResponseEntity.ok(productService.getById(id));
     }
 
+    /**
+     * Get All Products
+     * GET /api/pms/products
+     */
+    @GetMapping
+    public ResponseEntity<List<ProductEntity>> getAll() {
+        return ResponseEntity.ok(productService.getAll());
+    }
+
+    /**
+     * Update Product
+     * PUT /api/pms/products/{id}
+     */
     @PutMapping("/{id}")
-    public ResponseEntity<Product> updateById(@PathVariable Long id, @RequestBody Product product) {
-        Product existingProduct = getProduct(id);
+    public ResponseEntity<ProductEntity> update(
+            @PathVariable Long id,
+            @RequestBody ProductEntity product) {
 
-        if (existingProduct == null) {
-            throw new EntityNotFoundException("The product not found: " + id);
-        } else {
-            existingProduct.setName(product.getName());
-            existingProduct.setDescription(product.getDescription());
-            existingProduct.setStatus(product.getStatus());
-            existingProduct.setBrand(product.getBrand());
-            existingProduct.setCategory(product.getCategory());
-            existingProduct.setUpdatedAt(LocalDateTime.now());
-        }
-
-        return ResponseEntity.ok(existingProduct);
+        return ResponseEntity.ok(
+                productService.update(id, product));
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteById(@PathVariable Long id) {
-        Product existingProduct = getProduct(id);
+    /**
+     * Deactivate Product (Soft delete)
+     * PATCH /api/pms/products/{id}/deactivate
+     */
+    @PatchMapping("/{id}/deactivate")
+    public ResponseEntity<Void> deactivate(
+            @PathVariable Long id) {
 
-        if (existingProduct == null) {
-            throw new EntityNotFoundException("The product not found: " + id);
-        } else {
-            products.remove(existingProduct);
-        }
-
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        productService.deactivate(id);
+        return ResponseEntity.noContent().build();
     }
-
-    private Product getProduct(Long id) {
-        return products.stream()
-                .filter(p -> id.equals(p.getId()))
-                .findFirst()
-                .orElse(null);
-    }
-
 }
