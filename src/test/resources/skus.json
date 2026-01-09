@@ -1,0 +1,14 @@
+[
+  { "id": 1, "code": "SKU-APPLE-500G", "productId": 1, "unitOfMeasure": "KG", "weight": 0.5, "price": 80.00, "quantity": 200, "status": "ACTIVE", "createAt": "2026-01-01T09:05:00", "updatedAt": null },
+  { "id": 2, "code": "SKU-APPLE-1KG", "productId": 1, "unitOfMeasure": "KG", "weight": 1.0, "price": 150.00, "quantity": 150, "status": "ACTIVE", "createAt": "2026-01-01T09:05:00", "updatedAt": null },
+
+  { "id": 3, "code": "SKU-BANANA-1KG", "productId": 2, "unitOfMeasure": "KG", "weight": 1.0, "price": 60.00, "quantity": 300, "status": "ACTIVE", "createAt": "2026-01-01T09:15:00", "updatedAt": null },
+  { "id": 4, "code": "SKU-BANANA-2KG", "productId": 2, "unitOfMeasure": "KG", "weight": 2.0, "price": 110.00, "quantity": 200, "status": "ACTIVE", "createAt": "2026-01-01T09:15:00", "updatedAt": null },
+
+  { "id": 5, "code": "SKU-RICE-5KG", "productId": 3, "unitOfMeasure": "KG", "weight": 5.0, "price": 450.00, "quantity": 100, "status": "ACTIVE", "createAt": "2026-01-01T09:25:00", "updatedAt": null },
+  { "id": 6, "code": "SKU-RICE-10KG", "productId": 3, "unitOfMeasure": "KG", "weight": 10.0, "price": 880.00, "quantity": 80, "status": "ACTIVE", "createAt": "2026-01-01T09:25:00", "updatedAt": null },
+
+  { "id": 7, "code": "SKU-MILK-500ML", "productId": 4, "unitOfMeasure": "ML", "weight": 0.5, "price": 30.00, "quantity": 400, "status": "ACTIVE", "createAt": "2026-01-01T09:35:00", "updatedAt": null },
+  { "id": 8, "code": "SKU-MILK-1L", "productId": 4, "unitOfMeasure": "L", "weight": 1.0, "price": 55.00, "quantity": 300, "status": "ACTIVE", "createAt": "2026-01-01T09:35:00", "updatedAt": null }
+
+]

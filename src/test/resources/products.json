@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "code": "PROD-APPLE",
+    "name": "Apple",
+    "description": "Fresh red apples",
+    "category": "Fruits",
+    "brand": "Farm Fresh",
+    "status": "ACTIVE",
+    "createdAt": "2026-01-01T09:00:00",
+    "updatedAt": null
+  },
+  {
+    "id": 2,
+    "code": "PROD-BANANA",
+    "name": "Banana",
+    "description": "Organic bananas",
+    "category": "Fruits",
+    "brand": "Green Farm",
+    "status": "ACTIVE",
+    "createdAt": "2026-01-01T09:10:00",
+    "updatedAt": null
+  },
+  {
+    "id": 3,
+    "code": "PROD-RICE",
+    "name": "Rice",
+    "description": "Premium basmati rice",
+    "category": "Grains",
+    "brand": "India Gold",
+    "status": "ACTIVE",
+    "createdAt": "2026-01-01T09:20:00",
+    "updatedAt": null
+  },
+  {
+    "id": 4,
+    "code": "PROD-MILK",
+    "name": "Milk",
+    "description": "Fresh cow milk",
+    "category": "Dairy",
+    "brand": "Healthy Dairy",
+    "status": "ACTIVE",
+    "createdAt": "2026-01-01T09:30:00",
+    "updatedAt": null
+  },
+  {
+    "id": 5,
+    "code": "PROD-SUGAR",
+    "name": "Sugar",
+    "description": "Refined white sugar",
+    "category": "Groceries",
+    "brand": "Sweet Home",
+    "status": "ACTIVE",
+    "createdAt": "2026-01-01T09:40:00",
+    "updatedAt": null
+  },
+  {
+    "id": 6,
+    "code": "PROD-SALT",
+    "name": "Salt",
+    "description": "Iodized salt",
+    "category": "Groceries",
+    "brand": "Nature Pure",
+    "status": "ACTIVE",
+    "createdAt": "2026-01-01T09:50:00",
+    "updatedAt": null
+  },
+  {
+    "id": 7,
+    "code": "PROD-TEA",
+    "name": "Tea Powder",
+    "description": "Premium tea powder",
+    "category": "Beverages",
+    "brand": "Assam Gold",
+    "status": "ACTIVE",
+    "createdAt": "2026-01-01T10:00:00",
+    "updatedAt": null
+  },
+  {
+    "id": 8,
+    "code": "PROD-COFFEE",
+    "name": "Coffee Powder",
+    "description": "Instant coffee powder",
+    "category": "Beverages",
+    "brand": "Brew Master",
+    "status": "ACTIVE",
+    "createdAt": "2026-01-01T10:10:00",
+    "updatedAt": null
+  },
+  {
+    "id": 9,
+    "code": "PROD-OIL",
+    "name": "Cooking Oil",
+    "description": "Refined sunflower oil",
+    "category": "Edible Oils",
+    "brand": "Sun Lite",
+    "status": "ACTIVE",
+    "createdAt": "2026-01-01T10:20:00",
+    "updatedAt": null
+  },
+  {
+    "id": 10,
+    "code": "PROD-BREAD",
+    "name": "Bread",
+    "description": "Fresh wheat bread",
+    "category": "Bakery",
+    "brand": "Bake House",
+    "status": "ACTIVE",
+    "createdAt": "2026-01-01T10:30:00",
+    "updatedAt": null
+  },
+
+  { "id": 11, "code": "PROD-BUTTER", "name": "Butter", "description": "Salted butter", "category": "Dairy", "brand": "Creamy", "status": "ACTIVE", "createdAt": "2026-01-01T10:40:00", "updatedAt": null },
+  { "id": 12, "code": "PROD-CHEESE", "name": "Cheese", "description": "Cheddar cheese", "category": "Dairy", "brand": "Cheese Land", "status": "ACTIVE", "createdAt": "2026-01-01T10:50:00", "updatedAt": null },
+  { "id": 13, "code": "PROD-FLOUR", "name": "Wheat Flour", "description": "Whole wheat flour", "category": "Grains", "brand": "Healthy Grain", "status": "ACTIVE", "createdAt": "2026-01-01T11:00:00", "updatedAt": null },
+  { "id": 14, "code": "PROD-LENTIL", "name": "Lentils", "description": "Mixed lentils", "category": "Pulses", "brand": "Pulse Pro", "status": "ACTIVE", "createdAt": "2026-01-01T11:10:00", "updatedAt": null },
+  { "id": 15, "code": "PROD-SPICES", "name": "Spices Pack", "description": "Mixed spices", "category": "Spices", "brand": "Spice King", "status": "ACTIVE", "createdAt": "2026-01-01T11:20:00", "updatedAt": null },
+  { "id": 16, "code": "PROD-NOODS", "name": "Noodles", "description": "Instant noodles", "category": "Packaged Food", "brand": "Quick Eat", "status": "ACTIVE", "createdAt": "2026-01-01T11:30:00", "updatedAt": null },
+  { "id": 17, "code": "PROD-BISCUIT", "name": "Biscuits", "description": "Cream biscuits", "category": "Snacks", "brand": "Crunchy", "status": "ACTIVE", "createdAt": "2026-01-01T11:40:00", "updatedAt": null },
+  { "id": 18, "code": "PROD-JUICE", "name": "Fruit Juice", "description": "Mixed fruit juice", "category": "Beverages", "brand": "Fresh Sip", "status": "ACTIVE", "createdAt": "2026-01-01T11:50:00", "updatedAt": null },
+  { "id": 19, "code": "PROD-WATER", "name": "Drinking Water", "description": "Mineral water", "category": "Beverages", "brand": "Pure Drop", "status": "ACTIVE", "createdAt": "2026-01-01T12:00:00", "updatedAt": null },
+  { "id": 20, "code": "PROD-CHOC", "name": "Chocolate", "description": "Milk chocolate", "category": "Confectionery", "brand": "Choco Fun", "status": "ACTIVE", "createdAt": "2026-01-01T12:10:00", "updatedAt": null }
+]
