@@ -1,4 +1,4 @@
-package com.arivoli.pms.model;
+package com.arivoli.pms.response;
 
 import java.time.LocalDateTime;
 
